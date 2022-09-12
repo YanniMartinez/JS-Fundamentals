@@ -1,0 +1,56 @@
+/** Función tradicional */
+function saludar( nombre ) {
+    // console.log( arguments ); elemento explicito que obtiene todos los argumentos
+    // console.log('Hola ' + nombre );
+    return [1,2];
+
+    // Esto nunca se va a ejecutar
+    console.log('Soy un código que está después del return');
+}
+
+/** Función anónima */
+const saludar2 = function( nombre ) {
+    console.log('Hola ' + nombre );
+}
+
+/** Funciones de Flecha o lambda Functions */
+const saludarFlecha = () => {
+    console.log('Hola Flecha');
+}
+
+/** Función de flecha con argumento, los parentesis de los 
+ * argumentos son opcionales, sin embargo, se recomienda ponerlos
+ * Son más eficientes que las anteriores
+*/
+const saludarFlecha2 = ( nombre ) => {
+    console.log('Hola ' + nombre );
+}
+
+
+
+const retornoDeSaludar = saludar( 'Fernando', 40, true, 'Costa Rica' ); // 1
+
+// saludar2( 'Fernando' );
+
+// saludarFlecha();
+// saludarFlecha2('Melissa');
+
+function sumar( a, b ) {
+    return a + b;
+}
+
+// const sumar2 = (a,b) => {
+//     return a + b;
+// }
+const sumar2 = (a,b) => a + b;
+
+function getAleatorio() {
+    return Math.random();
+}
+
+// En una función de flecha, que no tenga llaves { }
+// getAleatorio2()
+const getAleatorio2 = () => Math.random();
+
+
+console.log(  getAleatorio2()   );
